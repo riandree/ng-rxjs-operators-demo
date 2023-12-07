@@ -1,0 +1,14 @@
+.main {
+    display: flex;
+}
+
+.navigation {
+}
+
+.content {
+    flex-grow: 1;
+}
+
+div {
+    border: 1px solid seagreen;
+}
