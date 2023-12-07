@@ -1,0 +1,11 @@
+label {
+    margin-top: 2em;
+}
+textarea {
+    background-color: darkgray;
+    color: black;
+    font-size: large;
+    overflow-y: scroll;
+    margin-top: 0.3em;
+    height: 50vh;
+}

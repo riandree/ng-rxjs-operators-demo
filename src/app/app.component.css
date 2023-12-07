@@ -3,12 +3,16 @@
 }
 
 .navigation {
+    border-right: 2px solid darkblue;
 }
 
 .content {
+    display: flex;
+    flex-direction: column;
     flex-grow: 1;
+    padding: 1em;
 }
 
-div {
-    border: 1px solid seagreen;
+* {
+    font-family: sans-serif;
 }

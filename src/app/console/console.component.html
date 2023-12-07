@@ -1,0 +1,11 @@
+<div style="display: flex;flex-direction: column;">
+    <label>
+        AutoScroll <input #autoscroll type="checkbox">
+    </label>
+    @if (autoscroll.checked) {
+        <textarea readonly cols="80" #textarea [scrollTop]="textarea.scrollHeight">{{ text }}</textarea>
+    } @else {
+        <textarea readonly cols="80">{{ text }}</textarea>
+    }
+    <button (click)="clear()">clear</button>
+</div>

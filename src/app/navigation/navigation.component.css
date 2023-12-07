@@ -7,18 +7,21 @@ li {
     background-color: azure;
     border: 1px solid gray;
     border-radius: 0.4em;
-    padding: 0.2em;
+    padding-left: 0.4em;
+    padding-right: 0.4em;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
     margin-top: 0.5em;
     text-align: center;
 }
 
 li:hover {
     background-color: aqua;
+    cursor: pointer;
 }
 
 a {
     text-decoration: none;
-    font-family: sans-serif;
 }
 
 ul li.active {

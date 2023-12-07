@@ -24,5 +24,35 @@ export const routes: Routes = [
         path : "distinctuntilchanged",
         title : "distinctUntilChanged",
         component : DistinctUnitlChangedComponent
+    },
+    {
+        path : "A",
+        title : "x",
+        component : DistinctUnitlChangedComponent
+    },
+    {
+        path : "B",
+        title : "x",
+        component : DistinctUnitlChangedComponent
+    },
+    {
+        path : "C",
+        title : "x",
+        component : DistinctUnitlChangedComponent
+    },
+    {
+        path : "D",
+        title : "x",
+        component : DistinctUnitlChangedComponent
+    },
+    {
+        path : "E",
+        title : "x",
+        component : DistinctUnitlChangedComponent
+    },
+    {
+        path : "F",
+        title : "x",
+        component : DistinctUnitlChangedComponent
     }
 ];
