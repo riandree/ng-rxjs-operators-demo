@@ -1,1 +1,25 @@
-<rxd-demo-header title="catchError" desc="lorem Ipsum Dolor"/>
+<rxd-demo-header title="catchError" [desc]="description"/>
+
+<p>
+    <label>
+        The first observable stream handles errors by catching the error and throwing a new Error-Object 
+        by means of the Javascript 'throw' statement from within the 'catchError' Handler.
+        <p><input #firstMsg type="text"/>
+        <button (click)="firstErrorSubject.error(firstMsg.value)">inject Error into first reactive stream</button></p>
+        This error thrown from within the catchError-Handler will become an rxjs error-event and could be handled by
+        catchError-handlers further down the pipeline but since the are no other error-handlers it will be
+        catched by rxjs resulting in the observable stream being ended and the error logged on the browser console.
+    </label>
+</p>
+<hr>
+<p>
+    <label>
+        The second observable stream handles errors by catching the error and returning a new observable.
+        In this case the new observable will emit 10 events at an interval of 0.1s and complete afterwards.
+        <p><input #secondMsg type="text"/>
+        <button (click)="secondErrorSubject.error(secondMsg.value)">inject Error into second reactive stream</button></p>
+    </label>
+</p>
+<p style="background-color: yellow;">
+    Reload page to restart the observables.
+</p>

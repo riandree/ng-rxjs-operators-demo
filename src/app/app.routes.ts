@@ -54,5 +54,40 @@ export const routes: Routes = [
         path : "F",
         title : "x",
         component : DistinctUnitlChangedComponent
+    },
+    {
+        path : "F",
+        title : "x",
+        component : DistinctUnitlChangedComponent
+    },
+    {
+        path : "F",
+        title : "x",
+        component : DistinctUnitlChangedComponent
+    },
+    {
+        path : "F",
+        title : "x",
+        component : DistinctUnitlChangedComponent
+    },
+    {
+        path : "F",
+        title : "x",
+        component : DistinctUnitlChangedComponent
+    },
+    {
+        path : "F",
+        title : "x",
+        component : DistinctUnitlChangedComponent
+    },
+    {
+        path : "F",
+        title : "x",
+        component : DistinctUnitlChangedComponent
+    },
+    {
+        path : "F",
+        title : "x",
+        component : DistinctUnitlChangedComponent
     }
 ];

@@ -1,1 +1,20 @@
-<rxd-demo-header title="concatMap" desc="lorem Ipsum Dolor"/>
+<rxd-demo-header title="concatMap" [desc]="description"/>
+<p>
+    This example facilitates an observable of observables. I.e. each event of the <em>"outer"</em> observable
+    is an observable itself that, in this case, represents a limited stream of numbers. 
+</p>
+<p>
+    The pipe of the outer observable uses the <b>concatMap</b> operator to map the numbers by turning them
+    into a string and concatenating the value of the textfield below.
+</p>
+<p> 
+    Each time this button below is pressed a new "inner" observable providing the sequence 0..9 at
+    an interval of 1 second is put into the stream of the "outer" observable.
+</p>
+<input #input type="text">&nbsp;<button (click)="nextInner(input.value)">next(interval(1000).pipe(take(10)))</button>
+<p>
+    The <b>concatMap</b>-Operator subscribes to each "inner" observable, maps it's elements and puts the result
+    back into the "outer" stream thereby mapping and flattening the stream of observables. 
+    Important! Each "inner" observable is processed until it completes and only then subscribes the <b>concatMap</b>-Operator
+    to the next "inner" observable thereby flattening and concatenating the mapping results.
+</p>
