@@ -1,0 +1,20 @@
+<rxd-demo-header title="min, max and count" desc="showing the effect of the min, max and count operators"/>
+
+This demo uses three Subjects (i.e. Observable streams into which events can be put programmatically).
+Each value provided below is put into each of those Observables/Subjects and each of those 
+Observables is configured to use either the min, max or count operators.
+On clicking the 'on subjects complete()' button below all of those Observables are completed and the console
+shows the result of each of those operators.
+
+Please provide a series of numbers using the textfield and the 'next' button below.
+<p>
+    <input #input type="number" [(ngModel)]="currentValue">&nbsp;
+    <button [disabled]="!currentValue" (click)="next(input.value)">all subjects next({{currentValue}})</button>
+</p>
+<ul>
+    <li *ngFor="let el of lastValues">{{el}}</li>
+</ul>
+And finally complete the series of numbers using this button. Only after completing the source observables will
+the observales emit their final values (here the minimum, maximum and number of values aggregated of all values 
+received until the source observables completed).
+<button [disabled]="!finishable" (click)="complete()">all subjects complete()</button>

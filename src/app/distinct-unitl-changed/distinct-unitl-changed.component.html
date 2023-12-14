@@ -1,1 +1,14 @@
-<rxd-demo-header title="distinctUntilChanged" desc="lorem Ipsum Dolor"/>
+<rxd-demo-header title="distinctUntilChanged" [desc]="description"/>
+
+<p>
+    Fill in a value <input #input type="text"> and press this <button (click)="nextValue(input.value)">button</button> to put new values into 
+    the observable stream of this example. Notice what happens if you provide the same value
+    several times.
+</p>
+The observable that will receive the values is configured with a pipe like this:
+<pre>
+    subject.pipe(
+        distinctUntilChanged(),          // makes sure no two consecutive values are the same
+        takeUntilDestroyed()             // makes sure observable is unsubscribed when demo component is destroyed
+    ).subscribe(v = console.println(v))  // write received values to the textarea of this demo
+</pre>

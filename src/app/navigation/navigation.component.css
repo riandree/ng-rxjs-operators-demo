@@ -4,8 +4,8 @@ ul {
 }
 
 li {
-    background-color: azure;
-    border: 1px solid gray;
+    background-color: aquamarine;
+    border: 3px solid aquamarine;
     border-radius: 0.4em;
     padding-left: 0.4em;
     padding-right: 0.4em;
@@ -15,8 +15,28 @@ li {
     text-align: center;
 }
 
+li.higherorder {
+    background-color: cornflowerblue;
+    border: 3px solid cornflowerblue;
+}
+
+li.error {
+    background-color: indianred;
+    border: 3px solid indianred;
+}
+
+li.filter {
+    background-color: yellow;
+    border: 3px solid yellow;
+}
+
+li.aggregate {
+    background-color: greenyellow;
+    border: 3px solid greenyellow;
+}
+
 li:hover {
-    background-color: aqua;
+    background-color: greenyellow;
     cursor: pointer;
 }
 
@@ -25,6 +45,6 @@ a {
 }
 
 ul li.active {
-    background-color: cornflowerblue;
+    background-color: chocolate;
     color: bisque;
 }

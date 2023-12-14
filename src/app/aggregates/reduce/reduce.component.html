@@ -1,0 +1,14 @@
+<rxd-demo-header title="reduce" desc="showing the effect of the 'reduce' operator"/>
+
+Please provide a series of numbers using the textfield and the 'next' button below.
+<p>
+    <input #input type="number" [(ngModel)]="currentValue">&nbsp;
+    <button [disabled]="!currentValue" (click)="next(input.value)">subject.next({{currentValue}})</button>
+</p>
+<ul>
+    <li *ngFor="let el of lastValues">{{el}}</li>
+</ul>
+And finally complete the series of numbers using this button. Only after completing the source observable will
+the observale that was created by the <b>reduce</b> Operator emit it's final value (here the sum of all values 
+received until the source completed).
+<button [disabled]="!finishable" (click)="complete()">subject.complete()</button>

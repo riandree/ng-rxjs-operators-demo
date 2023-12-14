@@ -1,0 +1,12 @@
+<rxd-demo-header title="scan" desc="showing the effect of the 'scan' operator"/>
+
+Please provide a series of numbers using the textfield and the 'next' button below.
+<p>
+    <input #input type="number" [(ngModel)]="currentValue">&nbsp;
+    <button [disabled]="!currentValue" (click)="next(input.value)">subject.next({{currentValue}})</button>
+</p>
+<ul>
+    <li *ngFor="let el of lastValues">{{el}}</li>
+</ul>
+The <b>scan</b>-Operator performs a reduction operation on each new value and reduces all values seen so far 
+into a new value computed from all the values seen so far. 

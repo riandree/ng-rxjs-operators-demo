@@ -1,0 +1,19 @@
+<rxd-demo-header title="exhaustMap" [desc]="description"/>
+<p>
+    This example facilitates an observable of observables. I.e. each event of the <em>"outer"</em> observable
+    is an observable itself that, in this case, represents a limited stream of numbers. 
+</p>
+<p>
+    The pipe of the outer observable uses the <b>exhaustMap</b> operator to map the numbers by turning them
+    into a string and concatenating the value of the textfield below.
+</p>
+<p> 
+    Each time this button below is pressed a new "inner" observable providing the sequence 0..9 at
+    an interval of 1 second is put into the stream of the "outer" observable.
+</p>
+<input #input type="text">&nbsp;<button (click)="nextInner(input.value)">next(interval(1000).pipe(take(10)))</button>
+<p>
+    The <b>exhaustMap</b>-Operator subscribes to incoming "inner" observable as long as there exists no active subscription of an 
+    earlier "inner" observable. If there is still an active subscription to an "inner" observable any incoming new "inner" observables
+    are ignored and discarded.
+</p>

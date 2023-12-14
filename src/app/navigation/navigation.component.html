@@ -1,5 +1,5 @@
 <ul>
     @for (route of routes; track $index) {
-        <li routerLinkActive="active" [routerLink]="route.path"><span>{{ route.title }}</span></li>
+        <li routerLinkActive="active" [ngClass]="route.data?.['operatorClass']" [routerLink]="route.path"><span>{{ route.title }}</span></li>
     }
 </ul>
