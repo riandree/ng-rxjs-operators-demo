@@ -8,8 +8,7 @@ import { ConsoleService } from '../service/console.service';
   selector: 'rxd-catch-error',
   standalone: true,
   imports: [ DemoHeaderComponent ],
-  templateUrl: './catch-error.component.html',
-  styleUrl: './catch-error.component.css'
+  templateUrl: './catch-error.component.html'
 })
 export class CatchErrorComponent {
 

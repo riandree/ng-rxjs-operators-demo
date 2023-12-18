@@ -4,7 +4,7 @@ import { Observable, OperatorFunction, map, switchMap } from 'rxjs';
 import { HigherorderMapBaseComponent } from '../higherorder.component';
 
 @Component({
-  selector: 'rxd-merge-map',
+  selector: 'rxd-switch-map',
   standalone: true,
   imports: [ DemoHeaderComponent ],
   templateUrl: './switch-map.component.html',

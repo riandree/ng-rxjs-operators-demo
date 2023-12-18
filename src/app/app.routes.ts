@@ -1,13 +1,4 @@
 import { Routes } from '@angular/router';
-import { CatchErrorComponent } from './catch-error/catch-error.component';
-import { ConcatMapComponent } from './higherorder/concat-map/concat-map.component';
-import { DistinctUnitlChangedComponent } from './distinct-unitl-changed/distinct-unitl-changed.component';
-import { MergeMapComponent } from './higherorder/merge-map/merge-map.component';
-import { SwitchMapComponent } from './higherorder/switch-map/switch-map.component';
-import { ExhaustMapComponent } from './higherorder/exhaust-map/exhaust-map.component';
-import { ReduceComponent } from './aggregates/reduce/reduce.component';
-import { MinMaxCountComponent } from './aggregates/min-max-count/min-max-count.component';
-import { ScanComponent } from './aggregates/scan/scan.component';
 import { DummyComponent } from './dummy/dummy.component';
 
 export const routes: Routes = [
@@ -15,60 +6,59 @@ export const routes: Routes = [
         path : "catcherror",
         title : "catchError",
         data : { operatorClass : "error" },
-        component : CatchErrorComponent
+        loadComponent : () => import("./catch-error/catch-error.component").then(m => m.CatchErrorComponent)
     },
     {
         path : "concatmap",
         title : "concatMap",
         data : { operatorClass : "higherorder" },
-        component : ConcatMapComponent
+        loadComponent : () => import("./higherorder/concat-map/concat-map.component").then(m => m.ConcatMapComponent)
     },
     {
         path : "mergemap",
         title : "mergeMap", 
         data : { operatorClass : "higherorder" },
-        component : MergeMapComponent
+        loadComponent : () => import("./higherorder/merge-map/merge-map.component").then(m => m.MergeMapComponent)
     },
     {
         path : "switchmap",
         title : "switchMap",
         data : { operatorClass : "higherorder" },
-        component : SwitchMapComponent
+        loadComponent : () => import("./higherorder/switch-map/switch-map.component").then(m => m.SwitchMapComponent)
     },
     {
         path : "exhaustmap",
         title : "exhaustMap",
         data : { operatorClass : "higherorder" },
-        component : ExhaustMapComponent
+        loadComponent : () => import("./higherorder/exhaust-map/exhaust-map.component").then(m => m.ExhaustMapComponent)
     },
     {
         path : "distinctuntilchanged",
         title : "distinctUntilChanged",
         data : { operatorClass : "filter" },
-        component : DistinctUnitlChangedComponent
+        loadComponent : () => import("./distinct-unitl-changed/distinct-unitl-changed.component").then(m => m.DistinctUnitlChangedComponent)
     },
     {
         path : "reduce",
         title : "reduce", 
         data : { operatorClass : "aggregate" },
-        component : ReduceComponent
-    },
+        loadComponent : () => import("./aggregates/reduce/reduce.component").then(m => m.ReduceComponent)    },
     {
         path : "scan",
         title : "scan", 
         data : { operatorClass : "aggregate" },
-        component : ScanComponent
+        loadComponent : () => import("./aggregates/scan/scan.component").then(m => m.ScanComponent)
     },
     {
         path : "minmaxcount",
         title : "min/max/count", 
         data : { operatorClass : "aggregate" },
-        component : MinMaxCountComponent
+        loadComponent : () => import("./aggregates/min-max-count/min-max-count.component").then(m => m.MinMaxCountComponent)
     },
     {
         path : "share",
         title : "share",
-        component : DummyComponent
+        loadComponent : () => import("./share/share.component").then(m => m.ShareComponent)
     },
     {
         path : "sharereplay",

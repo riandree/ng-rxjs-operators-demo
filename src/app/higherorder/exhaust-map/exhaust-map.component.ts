@@ -4,7 +4,7 @@ import { Observable, OperatorFunction, exhaustMap, map } from 'rxjs';
 import { HigherorderMapBaseComponent } from '../higherorder.component';
 
 @Component({
-  selector: 'rxd-merge-map',
+  selector: 'rxd-exhaust-map',
   standalone: true,
   imports: [ DemoHeaderComponent ],
   templateUrl: './exhaust-map.component.html',
