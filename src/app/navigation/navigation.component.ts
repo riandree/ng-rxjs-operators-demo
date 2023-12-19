@@ -16,7 +16,7 @@ export class NavigationComponent implements OnInit{
   routes : Route[] = [];
 
   ngOnInit(): void {
-    this.routes=this.router.config;
+    this.routes=this.router.config.filter(r => r.path?.length??0 > 0);
   }
 
 }

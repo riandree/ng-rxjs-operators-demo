@@ -1,0 +1,32 @@
+<rxd-demo-header title="share" [desc]="description"/>
+<p>
+        This demo has a source observable producing events on a regular basis using <b>timeout(500)</b>.
+        This observable is multicasted using the <b>shared</b> operator (see below).
+
+        Each click on the button below adds a new subscriber to the "shared" observable.
+</p>
+<p>
+    A ConnectableObservable encapsulates a 'Source' Observable but does not subscribe to it until its own 'connect' method is called.
+    Furthermore the ConnectableObservable internally uses a Subject to multicast upstream events to a number of downstream subscribers.
+    For example, it is possible to wrap a ConnectableObservable around a Cold Observable, then subscribe different Subscribers to the 
+    ConnectableObservable (which are forwarded by the ConnectableObservable to the enclosed Subject), and only initiate the 
+    subscription to the inner Cold Observable when all Subscribers of the ConnectableObservable are set up. When the ConnectableObservables connect method
+    is finally called the inner subject is subscribed to the observable wrapped by the ConnectableObservable.
+</p>
+    To setup a ConnectableObservable one can either use ConnectableObservables constructor directly or an operator like
+    <ul>
+        <li><b>multicast</b> expects a Subject or a factory producing a subject and creates a ConnectableObservable that will subscribe it's 
+            inner Subject to the upstream observable thereby multicasting the upstream events</li>
+        <li><b>publish</b> wraps the source observable in a 'Connectable Observable' and generates the necessary Subject for it.</li>
+    </ul>
+    <pre>
+        Whether via the constructor of the 'ConnectableObservable', via the multicast or publish operator, in all cases, 'connect' must be called on the
+        delivered ConnectableObservable to start processing the Source Observable.
+        Using the <b>refCount()</b> operator, it is possible to do this automatically. The operator ensures that when at least one Subscriber is present,
+        the 'connect' method of the ConnectableObservable is called, and also that when there are 0 Subscribers, the ConnectableObservable is unsubscribed.
+    </pre>
+    <ul>
+        <li><b>share</b>is the combination of publish() and refCount, i.e., it delivers a 'Normal' Observable that multicasts its events to all Subscribers.</li>
+    </ul>
+
+<button (click)="addSubscriber(input.value)">Add (another) subscriber named ...</button>&nbsp;<input #input type="text" placeholder="please type a name">

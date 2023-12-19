@@ -4,15 +4,14 @@ import { Component, Input } from '@angular/core';
   selector: 'rxd-demo-header',
   standalone: true,
   imports: [],
-  templateUrl: './demo-header.component.html',
-  styleUrl: './demo-header.component.css'
+  templateUrl: './demo-header.component.html'
 })
 export class DemoHeaderComponent {
 
   @Input({ required : true })
   title! : string;
 
-  @Input({ required : true })
-  desc! : string;
+  @Input()
+  desc? : string;
 
 }

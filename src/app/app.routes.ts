@@ -3,6 +3,11 @@ import { DummyComponent } from './dummy/dummy.component';
 
 export const routes: Routes = [
     {
+        path : "",
+        pathMatch: "full",
+        redirectTo : "catcherror"
+    },
+    {
         path : "catcherror",
         title : "catchError",
         data : { operatorClass : "error" },
@@ -58,17 +63,17 @@ export const routes: Routes = [
     {
         path : "share",
         title : "share",
-        loadComponent : () => import("./share/share.component").then(m => m.ShareComponent)
+        loadComponent : () => import("./multicasting/share/share.component").then(m => m.ShareComponent)
     },
     {
         path : "sharereplay",
         title : "shareReplay",
-        component : DummyComponent
+        loadComponent : () => import("./multicasting/share-replay/share-replay.component").then(m => m.ShareReplayComponent)
     },
     {
         path : "startwith",
         title : "startWith",
-        component : DummyComponent
+        loadComponent : () => import("./start-with/start-with.component").then(m => m.StartWithComponent)
     },
     {
         path : "withlatestfrom",

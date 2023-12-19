@@ -1,0 +1,12 @@
+<rxd-demo-header title="share" [desc]="description"/>
+<p>
+        This demo has a source observable producing events on a regular basis using <b>timeout(500)</b>.
+        This observable is multicasted using the <b>shared</b> operator (see below).
+
+        Each click on the button below adds a new subscriber to the "shared" observable.
+</p>
+<a routerLink="/share">See 'share' for an explanation of the basic functionality</a>. In contrast to 'share' the 'shareReplay'
+operator 'replays' all events of the source when a new subscription is made.
+<p>
+    <button (click)="addSubscriber(input.value)">Add (another) subscriber named ...</button>&nbsp;<input #input type="text" placeholder="please type a name">
+</p>

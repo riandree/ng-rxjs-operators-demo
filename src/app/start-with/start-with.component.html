@@ -1,0 +1,18 @@
+<rxd-demo-header title="startWith"/>
+
+<p>
+    Upon subscription, the <b>startWith</b> operator produces an observable that promptly emits all specified values. 
+    Following this, it subscribes to the source and replicates all emitted values to subscribers.
+</p>
+
+<input [(ngModel)]="currentItem" type="text" placeholder="an Item to start with">
+<button [disabled]="currentItem.length<1 || startItems.length>10" (click)="addItem()">add new Item</button>
+<button (click)="startItems.length=0">reset</button>
+&nbsp;-->&nbsp;
+<button [disabled]="startItems.length === 0" (click)="startNew()">new Observable using startWith</button>
+
+<ul>
+@for(item of startItems;track item) {
+    <li>{{item}}</li>
+}
+</ul>
