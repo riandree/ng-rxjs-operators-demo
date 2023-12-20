@@ -1,6 +1,6 @@
 #!/bin/bash
 
-set -e
+set -x
 git rm docs/*
 touch docs/keepme.git
 git add docs/keepme.git
