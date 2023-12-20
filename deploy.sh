@@ -1,4 +1,9 @@
+#!/bin/bash
+
+set -e
 git rm docs/*
+touch docs/keepme.git
+git add docs/keepme.git
 git commit -am "removed old contents of /docs folder for deployment"
 git merge main
 ng ci
