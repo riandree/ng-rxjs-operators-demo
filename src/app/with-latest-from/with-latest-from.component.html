@@ -1,1 +1,12 @@
-<p>with-latest-from works!</p>
+ssss
+<rxd-demo-header title="withLatestFrom"></rxd-demo-header>
+
+<input [(ngModel)]="currentLastValue" type="text">
+<button (click)="newLastValue()" style="margin-left: 0.3em;">set new 'last' Value</button>
+
+<ul>
+@for(v of values; track v) {
+    <li>{{v}}</li>
+}
+</ul>
+
