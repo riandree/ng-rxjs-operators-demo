@@ -2,9 +2,9 @@
 
 This project shows some of the most useful operators in the context of Angular frontends.
 
-See `https://riandree.github.io/ng-rxjs-operators-demo` for a working demo.
+See [https://riandree.github.io/ng-rxjs-operators-demo](https://riandree.github.io/ng-rxjs-operators-demo) for a working demo.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.0.
+The project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.0.
 
 ## Development server
 
