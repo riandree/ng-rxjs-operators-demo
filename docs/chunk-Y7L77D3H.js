@@ -1,1 +1,0 @@
-import{Za as i,_a as r,fb as a,ga as o,lb as s}from"./chunk-FMOREFH7.js";var c=(()=>{let t=class t{};t.\u0275fac=function(n){return new(n||t)},t.\u0275cmp=o({type:t,selectors:[["rxd-with-latest-from"]],standalone:!0,features:[s],decls:2,vars:0,template:function(n,f){n&1&&(i(0,"p"),a(1,"with-latest-from works!"),r())}});let e=t;return e})();export{c as WithLatestFromComponent};
