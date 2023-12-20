@@ -1,5 +1,4 @@
 import { Routes } from '@angular/router';
-import { DummyComponent } from './dummy/dummy.component';
 
 export const routes: Routes = [
     {
@@ -78,6 +77,6 @@ export const routes: Routes = [
     {
         path : "withlatestfrom",
         title : "withLatestFrom",
-        component : DummyComponent
+        loadComponent : () => import("./with-latest-from/with-latest-from.component").then(m => m.WithLatestFromComponent)
     }
 ];
