@@ -2,7 +2,7 @@
 
 set -x
 git rm docs/*
-mkdir -p docs && echo "keep this folder" > keepme.git
+mkdir -p docs && echo "keep this folder" > docs/keepme.git
 git add docs/keepme.git
 git commit -am "removed old contents of /docs folder for deployment"
 git fetch origin
