@@ -1,6 +1,6 @@
 #!/bin/bash
 
-set -x
+#set -x
 git rm docs/*
 mkdir -p docs && echo "keep this folder" > docs/keepme.git
 git add docs/keepme.git
